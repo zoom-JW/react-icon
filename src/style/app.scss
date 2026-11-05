@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.app-card {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+}
+
+.app-title {
+  margin: 0 0 10px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .app-title-icon {
+    margin-right: 10px;
+    color: #3f51b5;
+  }
+}
+
+.app-description {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.field-container {
+  margin-bottom: 15px;
+  text-align: left;
+
+  .field-label {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+
+    .field-icon {
+      margin-right: 6px;
+    }
+  }
+
+  .react-datepicker-wrapper {
+    width: 100%;
+  }
+
+  .datepicker-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+
+    &:focus {
+      border-color: #3f51b5;
+    }
+  }
+}
+
+.reset-btn-container {
+  margin-top: 20px;
+}
+
+.reset-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  background-color: #3f51b5;
+  color: #fff;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #303f9f;
+  }
+}
+
+/* Статус сессии */
+.session-status {
+  background-color: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: left;
+  font-size: 13px;
+
+  p {
+    margin: 0;
+
+    &:first-child {
+      margin-bottom: 6px;
+    }
+  }
+
+  .session-clock-icon {
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+
+  .status-active {
+    color: green;
+    font-weight: bold;
+  }
+
+  .status-inactive {
+    color: red;
+    font-weight: bold;
+  }
+}
+
+/* Сетка мест */
+.seats-container {
+  margin-bottom: 15px;
+
+  .seats-title {
+    margin: 0 0 10px 0;
+    font-size: 13px;
+    color: #666;
+  }
+
+  .seats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .seat-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #e0e0e0;
+    color: #333;
+    transition: all 0.2s;
+
+    .seat-icon {
+      display: block;
+      margin: 0 auto 4px;
+    }
+
+    &:hover {
+      background-color: #d5d5d5;
+    }
+
+    &.seat-btn--selected {
+      background-color: #4caf50;
+      color: #fff;
+
+      &:hover {
+        background-color: #43a047;
+      }
+    }
+  }
+}
+
+/* Форма оплаты */
+.payment-section {
+  margin-top: 15px;
+  text-align: left;
+
+  .cards-wrapper {
+    margin-bottom: 15px;
+  }
+
+  .booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+
+    .booking-input {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      width: 100%;
+      outline: none;
+
+      &:focus {
+        border-color: #4caf50;
+      }
+    }
+
+    .row-inputs {
+      display: flex;
+      gap: 10px;
+    }
+
+    .confirm-btn {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #4caf50;
+      color: #fff;
+      transition: background-color 0.2s;
+
+      .confirm-btn-icon {
+        margin-right: 8px;
+      }
+
+      &:hover {
+        background-color: #43a047;
+      }
+    }
+  }
+}
